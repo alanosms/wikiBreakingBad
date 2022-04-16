@@ -1,6 +1,6 @@
 let fraseHtml = document.getElementById("frase");
 let tbody = document.getElementById('tbody');
-characters = requestApi("http://10.0.0.200:5500/teste.json");
+characters = requestApi("teste.json");
 
 function requestApi(url){
     let request = new XMLHttpRequest()
