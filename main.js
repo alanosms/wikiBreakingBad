@@ -1,6 +1,6 @@
 let fraseHtml = document.getElementById("frase");
 let tbody = document.getElementById('tbody');
-characters = requestApi("https://alanosms.github.io/wikiBreakingBad/teste.json");
+characters = requestApi("https://breakingbadapi.com/api/characters?limit=10&offset=0");
 
 function requestApi(url){
     let request = new XMLHttpRequest()
