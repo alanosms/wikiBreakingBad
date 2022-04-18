@@ -1,6 +1,6 @@
-let fraseHtml = document.getElementById("frase");
 let tbody = document.getElementById('tbody');
-characters = requestApi("https://breakingbadapi.com/api/characters?limit=10&offset=0");
+
+let td_id, td_name, td_birthday, td_nickname, td_status, td_portrayed, td_img, img;
 
 function requestApi(url){
     let request = new XMLHttpRequest()
@@ -8,16 +8,22 @@ function requestApi(url){
         request.send()
         return JSON.parse(request.responseText)
 }
-for (var c in characters) {
-    let tr = tbody.insertRow();
-        let td_id = tr.insertCell();
-        let td_name = tr.insertCell();
-        let td_birthday = tr.insertCell();
-        let td_nickname = tr.insertCell();
-        let td_status = tr.insertCell();
-        let td_portrayed = tr.insertCell();
-        let td_img = tr.insertCell();
-        let img = document.createElement('img');
+
+
+function createTable(url){
+    characters = requestApi(url);
+
+    for (var c in characters) {
+        let tr = tbody.insertRow();
+        td_id = tr.insertCell();
+        td_name = tr.insertCell();
+        td_birthday = tr.insertCell();
+        td_nickname = tr.insertCell();
+        td_status = tr.insertCell();
+        td_portrayed = tr.insertCell();
+        td_img = tr.insertCell();
+        img = document.createElement('img');
+
         img.src = characters[c].img;
         td_id.innerHTML = characters[c].char_id;
         td_name.innerHTML = characters[c].name;
@@ -25,6 +31,11 @@ for (var c in characters) {
         td_nickname.innerHTML = characters[c].nickname;
         td_status.innerHTML = characters[c].status;
         td_portrayed.innerHTML = characters[c].portrayed;
-        td_img.appendChild(img);
-        
+        td_img.appendChild(img);      
+}
+}
+function clearTable(){
+    for(let i=0;i<=10;i++){
+    $("tr").remove(); 
+    }
 }

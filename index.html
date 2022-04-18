@@ -17,9 +17,9 @@
     </div>
 
     <div class="content">
-      <table>
+      <table id="table">
         <tbody id="tbody">
-          <tr>
+          <tr class="struct">
             <td>Char ID</td>
             <td>Name</td>
             <td>Birthday</td>
@@ -31,7 +31,17 @@
         </tbody>
       </table>
     </div>
-
-    <script src="/src/apiCharacter.js"></script>
+    <div class="controls">
+      <div id="first">&#171</div>
+      <div id="prev"><</div>
+      <div class="numbers">
+          <div id="pageNumber">1</div>
+      </div>
+      <div id="next">></div>
+      <div id="last">&#187</div>
+  </div>
+    <script src="/src/controlsPage.js"></script>
+    <script src="/src/apiCharacter.js"
+    ></script>
   </body>
 </html>
