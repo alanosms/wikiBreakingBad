@@ -37,7 +37,10 @@ td{
 td img{
     height: 150px;
 }
-
+th{
+    height: auto;
+    text-align: center;
+}
 td img:hover{
     cursor: zoom-in;
     transition-delay: 0.1s;
