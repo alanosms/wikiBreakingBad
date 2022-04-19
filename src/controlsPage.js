@@ -15,27 +15,25 @@ function nextPage(){
     if (numberPage.innerHTML < 6){
     numberPage.innerHTML++;
     offset = offset + 10;
-    clearTable();
     createTable('https://breakingbadapi.com/api/characters?limit=10&offset='+offset);
     }
 }
 function goToFirst(){
+    alert('COOMING SOON');
     numberPage.innerHTML = 1;
     offset = 0;
     var link = 'https://breakingbadapi.com/api/characters?limit=10&offset='+offset;
-    console.log(link);
 }
 function goToLast(){
+    alert('COOMING SOON');
     offset = 60;
     numberPage.innerHTML = 6;
     var link = 'https://breakingbadapi.com/api/characters?limit=15&offset='+offset;
-    console.log(link);
 }
 function prevPage(){
+    alert('COOMING SOON');
     if (numberPage.innerHTML > 1){
         numberPage.innerHTML--;
         offset = offset - 10;
-        var link = 'https://breakingbadapi.com/api/characters?limit=15&offset='+offset;
-        console.log(link);
         }
 }
