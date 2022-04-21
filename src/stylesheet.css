@@ -56,6 +56,18 @@ td img:hover{
     margin: 10px;
     font-size: 25px;
 }
+
+.slider-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.slider-container img{
+    padding: 15px;
+    width: auto;
+    height: 20rem;
+}
 @media (max-width: 600px){
     h2{
         font-size: 20px;
