@@ -69,6 +69,7 @@ td img:hover {
 #last {
   margin: 10px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .slider-container {
