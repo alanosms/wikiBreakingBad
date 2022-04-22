@@ -17,8 +17,8 @@ O Projeto terá 3 páginas.
 - **Lista de mortes**
 ## :dart: Features ##
 
-❌ Estruturação das Páginas;\
-❌ Estilização das Páginas;\
+✔️ Estruturação das Páginas;\
+✔️ Estilização das Páginas;\
 ❌ Páginas responsivas;\
 ❌ Finalizado;
 
