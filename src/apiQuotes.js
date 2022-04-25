@@ -1,4 +1,4 @@
-
+let tbody = document.getElementById("tbody");
 function requestQuotes(url) {
   let request = new XMLHttpRequest();
   request.open("GET", url, false);
@@ -7,6 +7,7 @@ function requestQuotes(url) {
 }
 
 function showQuotes(author) {
+
   if (author === "Jesse Pinkman") {
     url = "https://breakingbadapi.com/api/quote?author=Jesse+Pinkman";
   } else if (author === "Walter White") {
@@ -24,12 +25,34 @@ function showQuotes(author) {
     else if(author === "Gustavo Fring"){
       url = "https://breakingbadapi.com/api/quote?author=Gus+Fring"
     }
+    
+    rowCountQuotes = document.getElementById('table').rows.length - 1;
+      if (rowCountQuotes > 1){
+        clearTable();
+      }
   quotes = requestQuotes(url);
   quotes.forEach((element) => {
-      var createP=document.createElement("p");
-      createP.classList.add('content');
-      createP.appendChild(document.createTextNode(element.quote));
-      document.body.appendChild(createP);
+
+    let tr = tbody.insertRow();
+    let td_id_quote = tr.insertCell();
+    let td_quote = tr.insertCell();
+
+    img = document.createElement("img");
+
+    td_id_quote.innerHTML = element.quote_id;
+    td_quote.innerHTML = element.quote;
+
     }
   )
 }
+
+function clearTable() {
+  quotes.forEach(element => { 
+    let rowCountQuotes = document.getElementById('table').rows.length - 1;
+      if (rowCountQuotes > 1){
+        quotes.forEach(element => {
+          document.getElementById("table").deleteRow(1);
+        });
+      }
+});
+}  
