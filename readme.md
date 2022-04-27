@@ -19,8 +19,7 @@ O Projeto terá 3 páginas.
 
 ✔️ Estruturação das Páginas;\
 ✔️ Estilização das Páginas;\
-❌ Páginas responsivas;\
-❌ Finalizado;
+✔️ Finalizado;
 
 
 ## :rocket: Tecnologias ##
